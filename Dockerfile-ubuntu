@@ -11,7 +11,4 @@ RUN mkdir /opt/tomcat &&\
     tar -xvzf /opt/tomcat/apache-tomcat-9.0.8.tar.gz
 RUN groupadd tomcat &&\
     useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
-RUN cd /opt/tomcat/apache-tomcat-9.0.8 &&\
-    chmod 777 conf bin &&\
-    chown -R tomcat webapps/ work/ temp/ logs/ bin/
-ENTRYPOINT ["sh","/opt/tomcat/apache-tomcat-9.0.8/bin/startup.sh"]
+
